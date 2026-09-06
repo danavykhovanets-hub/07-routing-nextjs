@@ -21,14 +21,14 @@ const authHeaders = {
 export async function fetchNotes(
   search: string,
   page: number,
-  tag?: string          // ← ДОДАЛОСЯ (необов'язковий)
+  tag?: string          
 ): Promise<FetchNotesResponse> {
   const response = await axios.get<FetchNotesResponse>(BASE_URL, {
     params: {
       search,
       page,
       perPage: 12,
-      ...(tag && { tag }),   // ← додаємо tag ТІЛЬКИ якщо він є
+      ...(tag && { tag }),   
     },
     headers: authHeaders,
   });
