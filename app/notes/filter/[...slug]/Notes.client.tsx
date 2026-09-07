@@ -5,14 +5,14 @@ import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { useDebouncedCallback } from "use-debounce";
 import css from "./NotesPage.module.css";
 
-import SearchBox from "../../components/SearchBox/SearchBox";
-import NoteList from "../../components/NoteList/NoteList";
-import Pagination from "../../components/Pagination/Pagination";
-import Modal from "../../components/Modal/Modal";
-import NoteForm from "../../components/NoteForm/NoteForm";
+import SearchBox from "../../../../components/SearchBox/SearchBox";
+import NoteList from "../../../../components/NoteList/NoteList";
+import Pagination from "../../../../components/Pagination/Pagination";
+import Modal from "../../../../components/Modal/Modal";
+import NoteForm from "../../../../components/NoteForm/NoteForm";
 
-import { fetchNotes, createNote, deleteNote } from "../../lib/api";
-import type { NoteTag } from "../../types/note";
+import { fetchNotes, createNote, deleteNote } from "../../../../lib/api";
+import type { NoteTag } from "../../../../types/note";
 
 interface NewNote {
   title: string;
